@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  height: 200vh;
+  background-color: #000; /* Background color for better contrast */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Height of the canvas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black; /* Optional: add a border to see the canvas edges */
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto; /* Allows clicks to pass through */
+}
+
+.text {
+  text-align: center;
+}
+
+.blur-container {
+  backdrop-filter: blur(10px) saturate(20%);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon_style {
+  margin: 0 10px;
+  color: whitesmoke; /* Color for icons */
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.links {
+  text-decoration: none;
+}
+
+.about_text {
+  font-size: 16px;
+}
+
+.header_size {
+  font-size: 40px;
+}
+
+.card_body_color {
+  background-color: transparent;
+  color: white;
+  border-color: #e73c7e;
+  border-color: #d8d6d6;
+  height: auto;
+}
+
+.img_height {
+  height: 302px;
+}
+
+.icon_style {
+  margin: 0.5rem;
+  opacity: 0.8;
+}
+
+.kk {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black; /* Initial background color */
+  transition: background-color 0.3s;
+  padding: 15px 20px;
+  color: white;
+}
+
+.kk.scrolled {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #000;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.kk a {
+  color: white; /* Ensures that anchor tags within .kk have white text */
+}
+
+.kk .navbar-nav .nav-link {
+  color: white; /* Ensures the nav link color is white */
+}
+
+.kk.scrolled a {
+  color: black;
+}
+
+.kk.scrolled .navbar-nav .nav-link {
+  color: black;
+}
+.profile-container {
+  display: inline-block; /* Ensures the container fits the image size */
+  position: relative; /* Needed for the pseudo-element positioning */
+  padding: 10px; /* Adjust to control the distance between the ring and the image */
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: block; /* Ensures the image behaves as a block element */
+}
+
+.profile-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2px solid #23a6d5; /* Adjust the border color and thickness */
+  z-index: -1; /* Place the ring behind the image */
+  box-shadow: 0 0 0 5px transparent; /* Creates the spacing between the border and the image */
+}
