@@ -53,7 +53,6 @@ canvas {
 #icons {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
 }
 
 .icon_style {
@@ -89,8 +88,13 @@ canvas {
   text-decoration: none;
 }
 
+.about-me{
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
 .about_text {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .header_size {
@@ -100,7 +104,13 @@ canvas {
 .card_body_color {
   background-color: transparent;
   color: white;
-  border-color: #e73c7e;
+  border-color: #d8d6d6;
+  height: auto;
+}
+
+.model_body_color {
+  background-color: black;
+  color: white;
   border-color: #d8d6d6;
   height: auto;
 }
@@ -111,7 +121,6 @@ canvas {
 
 .icon_style {
   margin: 0.5rem;
-  opacity: 0.8;
 }
 
 .kk {
@@ -161,13 +170,14 @@ canvas {
 .profile-container {
   display: inline-block; /* Ensures the container fits the image size */
   position: relative; /* Needed for the pseudo-element positioning */
-  padding: 10px; /* Adjust to control the distance between the ring and the image */
+  padding: 5px; /* Adjust to control the distance between the ring and the image */
 }
 
 .profile-img {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 180px;
+  width: 180px;
+  margin-top: 2rem;
   display: block; /* Ensures the image behaves as a block element */
 }
 
@@ -179,7 +189,246 @@ canvas {
   right: 0;
   bottom: 0;
   border-radius: 50%;
+  margin-top: 2rem;
   border: 2px solid #23a6d5; /* Adjust the border color and thickness */
   z-index: -1; /* Place the ring behind the image */
   box-shadow: 0 0 0 5px transparent; /* Creates the spacing between the border and the image */
+}
+
+html {
+  scroll-padding-top: 90px; /* Adjust this value to match your navbar's height */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-icon {
+  animation: blink 1s infinite;
+}
+
+.modal-fullscreen {
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.header-modal {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6b6b, #f06595, #845ef7, #339af0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 1rem;
+}
+
+.view-resume{
+  margin-left: 3.5rem;
+  margin-top: 3rem;
+}
+
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #5d5d5d;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+}
+
+.container-timeline {
+  position: relative;
+}
+
+.container-timeline.left {
+  left: 0%;
+  width: 12rem;
+}
+
+.container-timeline.right {
+  left: 100%;
+  width: 18rem;
+}
+
+.container-timeline::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -12px;
+  background: #ffffff;
+  border: 2px solid #d6d8d8;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container-timeline.right::after {
+  left: -8px;
+}
+
+.container-timeline::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006e51;
+  z-index: 1;
+}
+
+.container-timeline.right::before {
+  left: 8px;
+}
+
+.container-timeline .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #e8ebea;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.container-timeline.left .date {
+  right: -185px;
+}
+
+.container-timeline.right .date {
+  left: -185px;
+}
+
+.container-timeline .icon {
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  top: calc(50% - 15px);
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.container-timeline.left .icon {
+  right: 40px;
+  background: #fafafa;
+  border: 2px solid #1da581;
+  color: #1da581;
+
+}
+
+.container-timeline.right .icon {
+  left: 40px;
+  background: #fafafa;
+  border: 2px solid #f7408d;
+  color: #f7408d;
+
+}
+
+.container-timeline .content {
+  padding: 10px 60px 10px 10px;
+  background: transparent;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+  margin-right: 20px;
+  border: 2px solid #03b787;
+
+}
+
+.container-timeline.right .content {
+  padding: 10px 10px 10px 80px;
+  border-radius: 500px 0 0 500px;
+  margin-left: 20px;
+  border: 2px solid #f53874;
+}
+
+.container-timeline .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #d7dedc;
+}
+
+.container-timeline .content p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container-timeline {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .container-timeline.right {
+    left: 0%;
+  }
+
+  .container-timeline.left::after,
+  .container-timeline.right::after {
+    left: 82px;
+  }
+
+  .container-timeline.left::before,
+  .container-timeline.right::before {
+    left: 100px;
+    border-color: transparent #006e51 transparent transparent;
+  }
+
+  .container-timeline.left .date,
+  .container-timeline.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .container-timeline.left .icon,
+  .container-timeline.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .container-timeline.left .content,
+  .container-timeline.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
 }
