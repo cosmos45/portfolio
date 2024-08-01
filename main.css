@@ -5,6 +5,7 @@ body {
   color: white;
   height: 200vh;
   background-color: #000; /* Background color for better contrast */
+  text-decoration: none;
 }
 
 body::-webkit-scrollbar {
@@ -43,6 +44,18 @@ canvas {
   text-align: center;
 }
 
+.white {
+  color: whitesmoke;
+}
+
+.title-oz {
+  font-size: 5vw;
+}
+
+.subtitle-oz {
+  font-size: 3.5vw;
+}
+
 .blur-container {
   backdrop-filter: blur(10px) saturate(20%);
   background-color: rgba(255, 255, 255, 0.1);
@@ -55,9 +68,34 @@ canvas {
   display: flex;
 }
 
-.icon_style {
-  margin: 0 10px;
-  color: whitesmoke; /* Color for icons */
+.carousel_spacing{
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.card-title{
+  font-size: 1.5vw;
+}
+
+.research{
+  border-radius: 50%; 
+  height: 100%; 
+  width: 100%;
+}
+
+.modal-subtitle{
+  font-size: 1.5vw; 
+  margin: 0 8rem 4rem 8rem;
+}
+
+.icons_only {
+  margin: 0 1vw;
+  font-size: 2rem;
+}
+
+.card-img-top{
+  padding: 10px; 
+  border-radius: 15px;
 }
 
 .roboto-light {
@@ -88,7 +126,7 @@ canvas {
   text-decoration: none;
 }
 
-.about-me{
+.about-me {
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
@@ -97,8 +135,17 @@ canvas {
   font-size: 14px;
 }
 
+.quote-size {
+  font-size: 1.2vw;
+}
+
 .header_size {
-  font-size: 40px;
+  font-size: 36px;
+}
+
+.contact-text {
+  margin: 0 1vw;
+  font-size: 1.5vw;
 }
 
 .card_body_color {
@@ -131,6 +178,7 @@ canvas {
   transition: background-color 0.3s;
   padding: 15px 20px;
   color: white;
+  text-decoration: none;
 }
 
 .kk.scrolled {
@@ -213,6 +261,7 @@ html {
 
 .blinking-icon {
   animation: blink 1s infinite;
+  font-size: 0.6rem;
 }
 
 .modal-fullscreen {
@@ -237,11 +286,10 @@ html {
   margin-top: 1rem;
 }
 
-.view-resume{
+.view-resume {
   margin-left: 3.5rem;
   margin-top: 3rem;
 }
-
 
 .timeline {
   position: relative;
@@ -346,7 +394,6 @@ html {
   background: #fafafa;
   border: 2px solid #1da581;
   color: #1da581;
-
 }
 
 .container-timeline.right .icon {
@@ -354,7 +401,6 @@ html {
   background: #fafafa;
   border: 2px solid #f7408d;
   color: #f7408d;
-
 }
 
 .container-timeline .content {
@@ -364,7 +410,6 @@ html {
   border-radius: 0 500px 500px 0;
   margin-right: 20px;
   border: 2px solid #03b787;
-
 }
 
 .container-timeline.right .content {
