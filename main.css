@@ -56,36 +56,54 @@ canvas {
   font-size: 3.5vw;
 }
 
-.blur-container {
-  backdrop-filter: blur(10px) saturate(20%);
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-}
-
 #icons {
   margin-top: 20px;
   display: flex;
 }
 
-.carousel_spacing{
+.carousel_spacing {
   margin-left: 10vw;
   margin-right: 10vw;
 }
 
-.card-title{
+.card-title {
   font-size: 1.5vw;
 }
 
-.research{
-  border-radius: 50%; 
-  height: 100%; 
-  width: 100%;
+.research {
+  border-radius: 50%;
+  height: 10vh; /* Use viewport height instead of percentage */
+  width: 100vw; /* Use viewport width instead of percentage */
+  max-width: 100%; /* Ensure the element doesn't exceed its parent's width */
 }
 
-.modal-subtitle{
-  font-size: 1.5vw; 
+.modal-subtitle {
+  font-size: 1.5vw;
   margin: 0 8rem 4rem 8rem;
+}
+
+/* Small screens (e.g. mobile devices) */
+@media only screen and (max-width: 768px) {
+  .modal-subtitle {
+    font-size: 2.5vw;
+    margin: 0 2rem 2rem 2rem;
+  }
+}
+
+/* Medium screens (e.g. tablets) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .modal-subtitle {
+    font-size: 2vw;
+    margin: 0 4rem 3rem 4rem;
+  }
+}
+
+/* Large screens (e.g. desktops) */
+@media only screen and (min-width: 993px) {
+  .modal-subtitle {
+    font-size: 1.5vw;
+    margin: 0 8rem 4rem 8rem;
+  }
 }
 
 .icons_only {
@@ -93,8 +111,8 @@ canvas {
   font-size: 2rem;
 }
 
-.card-img-top{
-  padding: 10px; 
+.card-img-top {
+  padding: 10px;
   border-radius: 15px;
 }
 
@@ -126,26 +144,106 @@ canvas {
   text-decoration: none;
 }
 
-.about-me {
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-}
-
-.about_text {
-  font-size: 14px;
-}
-
 .quote-size {
   font-size: 1.2vw;
+}
+
+.contact-text {
+  margin: 0 1vw;
+  font-size: 1.5vw;
 }
 
 .header_size {
   font-size: 36px;
 }
 
-.contact-text {
-  margin: 0 1vw;
-  font-size: 1.5vw;
+/* Large screen sizes (desktops, laptops) */
+@media (max-width: 1200px) {
+  .header_size {
+    font-size: 32px;
+  }
+}
+
+/* Medium screen sizes (tablets, small laptops) */
+@media (max-width: 768px) {
+  .header_size {
+    font-size: 28px;
+  }
+
+  .research {
+    width: 10vw;
+    height: 8vh; /* Adjust the height for smaller screens */
+  }
+
+  .icons_only {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small screen sizes (mobile devices) */
+@media (max-width: 480px) {
+  .header_size {
+    font-size: 24px;
+  }
+
+  .research {
+    width: 12vw;
+    height: 6vh; /* Adjust the height for even smaller screens */
+  }
+
+  .icons_only {
+    font-size: 1.4rem;
+  }
+}
+
+/* Large screen sizes (desktops, laptops) */
+@media (max-width: 1200px) {
+  .icons_only {
+    font-size: 1.8rem;
+  }
+}
+
+/* Extra small screen sizes (small mobile devices) */
+@media (max-width: 320px) {
+  .icons_only {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small screens (mobile) */
+@media only screen and (max-width: 768px) {
+  .quote-size {
+    font-size: 16px; /* or 1.5em, 2rem, etc. */
+  }
+
+  .contact-text {
+    margin: 0 16px; /* fixed margin for small screens */
+    font-size: 18px; /* fixed font size for small screens */
+  }
+}
+
+/* Medium screens (tablet) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .quote-size {
+    font-size: 18px; /* or 1.75em, 2.25rem, etc. */
+  }
+
+  .contact-text {
+    margin: 0 2vw; /* adjusted margin for medium screens */
+    font-size: 20px; /* adjusted font size for medium screens */
+  }
+}
+
+/* Large screens (desktop) */
+@media only screen and (min-width: 993px) {
+  .quote-size {
+    font-size: 1.2vw; /* keep the original value for large screens */
+  }
+
+  .contact-text {
+    margin: 0 1vw; /* keep the original margin for large screens */
+    font-size: 1.5vw; /* keep the original font size for large screens */
+  }
 }
 
 .card_body_color {
@@ -163,7 +261,7 @@ canvas {
 }
 
 .img_height {
-  height: 302px;
+  height: 40vh; /* 30% of the viewport height */
 }
 
 .icon_style {
@@ -171,21 +269,19 @@ canvas {
 }
 
 .kk {
-  position: fixed;
   top: 0;
   width: 100%;
   background-color: black; /* Initial background color */
   transition: background-color 0.3s;
-  padding: 15px 20px;
   color: white;
-  text-decoration: none;
 }
 
 .kk.scrolled {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  background-size: 200% 200%;
   animation: gradient 15s ease infinite;
   color: #000;
+  overflow-x: hidden;
 }
 
 @keyframes gradient {
@@ -215,6 +311,16 @@ canvas {
 .kk.scrolled .navbar-nav .nav-link {
   color: black;
 }
+
+.about-me {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.about_text {
+  font-size: 14px;
+}
+
 .profile-container {
   display: inline-block; /* Ensures the container fits the image size */
   position: relative; /* Needed for the pseudo-element positioning */
@@ -223,10 +329,16 @@ canvas {
 
 .profile-img {
   border-radius: 50%;
-  height: 180px;
-  width: 180px;
+  height: 18vw;
+  width: 18vw;
   margin-top: 2rem;
   display: block; /* Ensures the image behaves as a block element */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  margin: 0 2%; /* Add this line */
 }
 
 .profile-container::before {
@@ -286,16 +398,37 @@ html {
   margin-top: 1rem;
 }
 
+/* Small screens (e.g. mobile devices) */
+@media only screen and (max-width: 768px) {
+  .header-modal {
+    font-size: 2.5rem;
+  }
+}
+
+/* Medium screens (e.g. tablets) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .header-modal {
+    font-size: 3rem;
+  }
+}
+
+/* Large screens (e.g. desktops) */
+@media only screen and (min-width: 993px) {
+  .header-modal {
+    font-size: 4rem;
+  }
+}
+
 .view-resume {
-  margin-left: 3.5rem;
-  margin-top: 3rem;
+  margin-left: 1vw;
+  margin-top: 3vw;
 }
 
 .timeline {
   position: relative;
   width: 100%;
   max-width: 200px;
-  margin-left: 3rem;
+  margin-left: 1rem;
   margin-top: 1rem;
   padding: 0;
 }
@@ -431,49 +564,4 @@ html {
   font-size: 12px;
   line-height: 14px;
   color: #fff;
-}
-
-@media (max-width: 767.98px) {
-  .timeline::after {
-    left: 90px;
-  }
-
-  .container-timeline {
-    width: 100%;
-    padding-left: 120px;
-    padding-right: 30px;
-  }
-
-  .container-timeline.right {
-    left: 0%;
-  }
-
-  .container-timeline.left::after,
-  .container-timeline.right::after {
-    left: 82px;
-  }
-
-  .container-timeline.left::before,
-  .container-timeline.right::before {
-    left: 100px;
-    border-color: transparent #006e51 transparent transparent;
-  }
-
-  .container-timeline.left .date,
-  .container-timeline.right .date {
-    right: auto;
-    left: 15px;
-  }
-
-  .container-timeline.left .icon,
-  .container-timeline.right .icon {
-    right: auto;
-    left: 146px;
-  }
-
-  .container-timeline.left .content,
-  .container-timeline.right .content {
-    padding: 30px 30px 30px 90px;
-    border-radius: 500px 0 0 500px;
-  }
 }
