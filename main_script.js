@@ -16,7 +16,7 @@ var numMetaballs = 30;
 var metaballs = [];
 
 for (var i = 0; i < numMetaballs; i++) {
-  var radius = Math.random() * 120 + 10;
+  var radius = Math.random() * (canvas.width / 15) + canvas.width / 50;
   metaballs.push({
     x: Math.random() * (canvas.width - 2 * radius) + radius,
     y: Math.random() * (canvas.height - 2 * radius) + radius,
