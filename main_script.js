@@ -14,9 +14,19 @@ var mouse = { x: 0, y: 0 };
 
 var numMetaballs = 30;
 var metaballs = [];
+const screenWidth = window.innerWidth;
 
 for (var i = 0; i < numMetaballs; i++) {
-  var radius = Math.random() * (canvas.width / 15) + canvas.width / 50;
+  if (screenWidth <= 600) {
+    // Mobile
+    var radius = Math.random() * (canvas.width / 15) + canvas.width / 12;
+  } else if (screenWidth <= 1200) {
+    // Tablet
+    var radius = Math.random() * (canvas.width / 15) + canvas.width / 20;
+  } else {
+    // Desktop
+    var radius = Math.random() * (canvas.width / 12) + canvas.width / 50;
+  }
   metaballs.push({
     x: Math.random() * (canvas.width - 2 * radius) + radius,
     y: Math.random() * (canvas.height - 2 * radius) + radius,

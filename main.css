@@ -66,10 +66,6 @@ canvas {
   margin-right: 10vw;
 }
 
-.card-title {
-  font-size: 1.5vw;
-}
-
 .research {
   border-radius: 50%;
   height: 10vh; /* Use viewport height instead of percentage */
@@ -111,9 +107,106 @@ canvas {
   font-size: 2rem;
 }
 
+.card01 {
+  transition: transform 0.5s;
+}
+
+.card01:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.card02 {
+  transition: transform 0.5s;
+}
+
+.card02:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.card03 {
+  transition: transform 0.5s;
+}
+
+.card03:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+.card04 {
+  transition: transform 0.5s;
+}
+
+.card04:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+#animate-git {
+  transition: transform 0.5s;
+}
+
+#animate-git:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+#animate-beh {
+  transition: transform 0.5s;
+}
+
+#animate-beh:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+#animate-lin {
+  transition: transform 0.5s;
+}
+
+#animate-lin:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+.bi-behance:hover {
+  color: #26f68e;
+}
+
+.bi-github:hover {
+  color: #fab647;
+}
+
+.bi-linkedin:hover {
+  color: #2e8bf4;
+}
+
+.crash {
+  transition: transform 0.8s;
+}
+
+.crash:hover {
+  text-shadow: 0 0 35px #ff0000;
+  -ms-transform: scale(1.3); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3);
+}
+
 .card-img-top {
-  padding: 10px;
   border-radius: 15px;
+}
+
+.card-body {
+  text-align: left;
+  z-index: 1;
 }
 
 .roboto-light {
@@ -249,8 +342,27 @@ canvas {
 .card_body_color {
   background-color: transparent;
   color: white;
-  border-color: #d8d6d6;
+  border: 0.5px solid #777676;
   height: auto;
+  border-radius: 15px;
+}
+
+.card-title {
+  font-size: 1.8vw;
+}
+
+.card-img-overlay {
+  background: black;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #c33764; /* fallback colour. Make sure this is just one solid colour. */
+  background: -webkit-linear-gradient(transparent, rgb(0, 0, 0));
+  background: linear-gradient(transparent, rgb(0, 0, 0));
+  background-size: 20% 80%;
+}
+
+.grey{
+  color: #d8d6d6;
 }
 
 .model_body_color {
@@ -555,7 +667,7 @@ html {
     position: relative;
     width: 100%;
   }
-  
+
   .timeline::after {
     content: "";
     position: absolute;
@@ -565,22 +677,22 @@ html {
     bottom: 0;
     left: 42vw;
   }
-  
+
   .container-timeline {
     position: relative;
   }
-  
+
   .container-timeline.left {
     left: 0%;
     width: 40vw;
   }
-  
+
   .container-timeline.right {
     left: 100%;
     width: 45vw;
     height: auto;
   }
-  
+
   .container-timeline::after {
     content: "";
     position: absolute;
@@ -592,11 +704,11 @@ html {
     border-radius: 16px;
     z-index: 1;
   }
-  
+
   .container-timeline.right::after {
     left: -30px;
   }
-  
+
   .container-timeline::before {
     content: "";
     position: absolute;
@@ -607,12 +719,12 @@ html {
     background: #006e51;
     z-index: 1;
   }
-  
+
   .container-timeline.right::before {
     background: #f7408d;
     left: -25px;
   }
-  
+
   .container-timeline .date {
     position: absolute;
     display: inline-block;
@@ -622,15 +734,15 @@ html {
     letter-spacing: 1px;
     z-index: 1;
   }
-  
+
   .container-timeline.left .date {
     right: -185px;
   }
-  
+
   .container-timeline.right .date {
     left: -185px;
   }
-  
+
   .container-timeline .icon {
     position: absolute;
     display: inline-block;
@@ -642,35 +754,35 @@ html {
     font-size: 18px;
     z-index: 1;
   }
-  
+
   .container-timeline.left .icon {
     right: 40px;
     background: #fafafa;
     border: 2px solid #1da581;
     color: #1da581;
   }
-  
+
   .container-timeline.right .icon {
     left: 20px;
     background: #fafafa;
     border: 2px solid #f7408d;
     color: #f7408d;
   }
-  
+
   .container-timeline .content {
     padding: 10px 30px 0px 10px;
     border-radius: 0 500px 500px 0;
     margin-right: 20px;
     border: 2px solid #03b787;
   }
-  
+
   .container-timeline.right .content {
     padding: 10px 10px 0px 55px;
     border-radius: 500px 0 0 500px;
     margin-left: 5px;
     border: 2px solid #f53874;
   }
-  
+
   .container-timeline .content p {
     font-size: 12px;
   }
