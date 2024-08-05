@@ -357,8 +357,8 @@ canvas {
   border-radius: 15px;
   background: #c33764; /* fallback colour. Make sure this is just one solid colour. */
   background: -webkit-linear-gradient(transparent, rgb(0, 0, 0));
-  background: linear-gradient(transparent, rgb(0, 0, 0));
-  background-size: 20% 80%;
+  background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
+  background-size: 20% 83%;
 }
 
 .grey{
