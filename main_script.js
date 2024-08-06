@@ -190,3 +190,38 @@ document.addEventListener("scroll", function () {
     nav.classList.remove("scrolled");
   }
 });
+
+document.getElementById("email-button").addEventListener("click", myEmail);
+document.getElementById("contact-button").addEventListener("click", myContact);
+
+function myEmail() {
+  var emailButton = document.getElementById("email-button");
+  emailButton.innerHTML =
+    'zendeomkar45@gmail.com  <i class="bi bi-copy ps-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy to Clipboard"></i> ';
+  navigator.clipboard.writeText("zendeomkar45@gmail.com");
+  // Re-initialize the tooltip
+  const tooltipTriggerEl = emailButton.querySelector(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipTriggerEl);
+  if (tooltipInstance) {
+    tooltipInstance.dispose();
+  }
+  new bootstrap.Tooltip(tooltipTriggerEl);
+}
+
+function myContact() {
+  var contactButton = document.getElementById("contact-button");
+  contactButton.innerHTML =
+    '+44 7824071128  <i class="bi bi-copy ps-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Copy to Clipboard"></i> ';
+  navigator.clipboard.writeText("+447824071128");
+  // Re-initialize the tooltip
+  const tooltipTriggerEl = contactButton.querySelector(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipInstance = bootstrap.Tooltip.getInstance(tooltipTriggerEl);
+  if (tooltipInstance) {
+    tooltipInstance.dispose();
+  }
+  new bootstrap.Tooltip(tooltipTriggerEl);
+}

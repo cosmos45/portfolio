@@ -119,9 +119,9 @@
           <p class="roboto-bold header_size text">Web Development</p>  
           <p class="roboto-regular text quote-size"><em> &quot; A website is never finished, only abandoned. &quot;</em></p>    
         </div>
-        <div id="carouselExampleFade" class="carousel slide">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">          
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="10000">
               <div class="row carousel_spacing">
                 <div class="col-md-4 p-4">
                   <div class="card card_body_color" id="card1">
@@ -223,7 +223,7 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" data-bs-interval="10000">
               <div class="row carousel_spacing">
                 <div class="col-md-4 p-4">
                   <div class="card card_body_color" id="card3">
@@ -584,9 +584,9 @@
         </div>
         <div class="row text">
           <p class="roboto-light mt-4 about_text"> All Projects have been designed using : 
-            <img src="images/icons/illustrator.png" width="3%"> 
-            <img src="images/icons/photoshop.png" width="3%">
-            <img src="images/icons/premiere-pro.png" width="3%">
+            <img src="images/icons/illustrator.png" class="img-responsive"> 
+            <img src="images/icons/photoshop.png" class="img-responsive">
+            <img src="images/icons/premiere-pro.png" class="img-responsive">
           </p>
         </div>
            
@@ -779,10 +779,10 @@
                 <p class="roboto-regular float-start mb-0"> Researched Reddit comment toxicity with deep learning, achieving 78% accuracy and
                   trimming manual moderation 30% using CNNs and RNNs.</p>
               </div>
-              
               <a href="https://medium.com/@astleribeiro/a-data-mining-and-text-analysis-approach-to-comment-toxicity-classification-on-reddit-24bc338e0e60" 
-                 class="mt-0 float-start" target="_blank">Click on this link to view the article</a>
-
+                class="mt-0 float-start crash reddit" target="_blank">Click on this link to view the article <i class="bi bi-arrow-up-right"></i></a>
+              
+              
             </div>
             <div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
           </div>
@@ -794,12 +794,12 @@
         <hr class="p-3">
         <div class="roboto-bold header_size mt-2 text">Contact Information</div>
         <p class="roboto-regular quote-size">Please feel free to contact me on the following accounts</p>
-        <p class="roboto-regular">
-          <i class="bi bi-envelope-at contact-text"></i> zendeomkar45@gmail.com 
-          <i class="bi bi-telephone-inbound ms-3 contact-text"></i>
-           +44 7824071129
-        </p>
+        <div class="mb-5">
+          <button type="button" class="btn btn-outline-light" onclick="myEmail" id="email-button"><i class="bi bi-envelope-at"></i> Email</button>
+          <button type="button" class="btn btn-outline-light" onclick="myContact" id="contact-button"> <i class="bi bi-telephone-inbound"></i> Mobile</button>
+        </div>  
       </div>
+      
     </section>
     </div>
     <script src="main_script.js"></script>
