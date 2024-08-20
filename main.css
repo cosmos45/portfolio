@@ -27,6 +27,18 @@ canvas {
   border: 1px solid black; /* Optional: add a border to see the canvas edges */
 }
 
+.blur-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 10, 10, 0.5); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  z-index: 1; /* Ensure it sits on top of the canvas */
+  pointer-events: none; /* Allows interaction with the canvas through the blur */
+}
+
 #overlay {
   position: absolute;
   top: 0;
@@ -38,6 +50,7 @@ canvas {
   justify-content: center;
   align-items: center;
   pointer-events: auto; /* Allows clicks to pass through */
+  z-index: 10000;
 }
 
 .text {
@@ -49,11 +62,11 @@ canvas {
 }
 
 .title-oz {
-  font-size: 5vw;
+  font-size: 3.5vw;
 }
 
 .subtitle-oz {
-  font-size: 3.5vw;
+  font-size: 2.5vw;
 }
 
 #icons {
